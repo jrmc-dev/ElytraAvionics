@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -39,6 +40,9 @@ public class ClientPlayerMixin {
 		Level world = player.level();
 		ElytraHUD.groundHeight = getHeightToGround(player, world);
 		ElytraHUD.verticalSpeed = Math.round(player.getDeltaMovement().y * 10.0) / 10.0;
+		Vec3 velocity = player.getDeltaMovement();
+		double speed = Math.sqrt(velocity.x * velocity.x + velocity.z * velocity.z) * 20;
+		ElytraHUD.groundSpeed = Math.round(speed * 10.0) / 10.0;
 		if (player.isFallFlying() && isElytraLow(player)) {
 			if (masterWarnInstance == null || !Minecraft.getInstance().getSoundManager().isActive(masterWarnInstance)) {
 				masterWarnInstance = new SimpleSoundInstance(
