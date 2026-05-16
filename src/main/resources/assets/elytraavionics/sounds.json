@@ -1,0 +1,12 @@
+{
+  "callout_5":   { "sounds": ["elytraavionics:callout_5"] },
+  "callout_10":  { "sounds": ["elytraavionics:callout_10"] },
+  "callout_20":  { "sounds": ["elytraavionics:callout_20"] },
+  "callout_30":  { "sounds": ["elytraavionics:callout_30"] },
+  "callout_40":  { "sounds": ["elytraavionics:callout_40"] },
+  "callout_50":  { "sounds": ["elytraavionics:callout_50"] },
+  "callout_60":  { "sounds": ["elytraavionics:callout_60"] },
+  "callout_70":  { "sounds": ["elytraavionics:callout_70"] },
+  "callout_100": { "sounds": ["elytraavionics:callout_100"] },
+  "master_warn": { "sounds": ["elytraavionics:master_warn"] }
+}

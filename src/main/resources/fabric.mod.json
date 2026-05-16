@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "elytraavionics",
+	"version": "${version}",
+	"name": "ElytraAvionics",
+	"description": "HUD and altitude callouts for elytra.",
+	"authors": [
+		"jrmc"
+	],
+	"contact": {
+	},
+	"license": "LGPL-3.0-only",
+	"icon": "assets/elytraavionics/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"com.jr.client.ElytraAvionicsClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "elytraavionics.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
