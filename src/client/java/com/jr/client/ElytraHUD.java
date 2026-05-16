@@ -5,7 +5,11 @@ import net.fabricmc.fabric.api.client.rendering.v1.hud.VanillaHudElements;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.resources.Identifier;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class ElytraHUD {
 
@@ -22,7 +26,14 @@ public class ElytraHUD {
     }
 
     private static void render(GuiGraphics graphics, DeltaTracker deltaTracker) {
-
+        LocalPlayer player = Minecraft.getInstance().player;
+        if(player == null) {
+            return;
+        }
+        ItemStack chest = player.getItemBySlot(EquipmentSlot.CHEST);
+        if(!chest.is(Items.ELYTRA)){
+            return;
+        }
         int screenWidth = Minecraft.getInstance().getWindow().getGuiScaledWidth();
         int screenHeight = Minecraft.getInstance().getWindow().getGuiScaledHeight();
         graphics.drawString(Minecraft.getInstance().font, "V/S: " + ElytraHUD.verticalSpeed, screenWidth - 70, screenHeight - 10, 0xFF00FF00);
