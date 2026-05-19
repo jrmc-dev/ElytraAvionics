@@ -19,6 +19,7 @@ public class ElytraAvionicsClient implements ClientModInitializer {
 	public static SoundEvent CALLOUT_70;
 	public static SoundEvent CALLOUT_100;
 	public static SoundEvent MASTER_WARN;
+	public static SoundEvent PULL_UP;
 
 	@Override
 	public void onInitializeClient() {
@@ -34,6 +35,7 @@ public class ElytraAvionicsClient implements ClientModInitializer {
 		CALLOUT_70  = registerSound("callout_70");
 		CALLOUT_100 = registerSound("callout_100");
 		MASTER_WARN = registerSound("master_warn");
+		PULL_UP     = registerSound("pull_up");
 	}
 
 	private static SoundEvent registerSound(String name) {

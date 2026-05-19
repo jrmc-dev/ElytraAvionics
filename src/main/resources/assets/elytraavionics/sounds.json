@@ -8,5 +8,6 @@
   "callout_60":  { "sounds": ["elytraavionics:callout_60"] },
   "callout_70":  { "sounds": ["elytraavionics:callout_70"] },
   "callout_100": { "sounds": ["elytraavionics:callout_100"] },
-  "master_warn": { "sounds": ["elytraavionics:master_warn"] }
+  "master_warn": { "sounds": ["elytraavionics:master_warn"] },
+  "pull_up":     { "sounds": ["elytraavionics:pull_up"] }
 }
