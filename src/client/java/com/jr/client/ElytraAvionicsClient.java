@@ -24,6 +24,7 @@ public class ElytraAvionicsClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		ElytraHUD.register();
+		ElytraMinimap.register();
 
 		CALLOUT_5   = registerSound("callout_5");
 		CALLOUT_10  = registerSound("callout_10");
